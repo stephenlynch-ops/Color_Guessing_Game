@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-/* Page Title Section */
+/* Page Title Section Styles*/
 
 #page-title-wrapper {
     width: 100%;
@@ -23,4 +23,80 @@ body {
 #title-headline {
     text-align: center;
     font-size: xx-large;
+}
+
+/* Game Playing Section Styles */
+
+#game-play-area {
+    background-color: #ddbe95;
+    width: 80%;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    max-height: 300px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+#color-chart {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.color-choice {
+    width: 20%;
+    height: 50px;
+    margin: 2.5%;
+    color: #ffffff;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+    font-size: smaller;
+    box-shadow: 2.5px 2.5px 1.25px#2f4f4f;
+}
+
+#red {
+    border: 2px solid #910000;
+    background-color: #ff0000;
+}
+
+#blue {
+    border: 2px solid #00009e;
+    background-color: #0000ff;
+}
+
+#green {
+    border: 2px solid #003600;
+    background-color: #006400;
+}
+
+#pink {
+    border: 2px solid #cf8e99;
+    background-color: #ffc0cb;
+}
+
+#red:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    box-shadow: none;
+}
+
+#blue:hover {
+    background-color: #ffffff;
+    color: #00009e;
+    box-shadow: none;
+}
+
+#green:hover {
+    background-color: #ffffff;
+    color: #003600;
+    box-shadow: none;
+}
+
+#pink:hover {
+    background-color: #ffffff;
+    color: #cf8e99;
+    box-shadow: none;
 }
