@@ -19,16 +19,16 @@
     <section id="game-play-section">
         <div id="game-play-area">
             <div id="color-chart">
-                <div id="red" class="color-choice">RED</div>
-                <div id="blue" class="color-choice">BLUE</div>
-                <div id="green" class="color-choice">GREEN</div>
-                <div id="pink" class="color-choice">PINK</div>
+                <button data-type="red" id="red" class="color-choice">Red</button>
+                <button data-type="blue" id="blue" class="color-choice">Blue</button>
+                <button data-type="green" id="green" class="color-choice">Green</button>
+                <button data-type="pink" id="pink" class="color-choice">Pink</button>
             </div>
             <div id="players-choice">
                 <h2 id="players-choice-feedback">Selected color: <span id="choosen-color">(color)</span></h2>
             </div>
             <div id="click-to-play">
-                <button id="play-button">CLICK TO PLAY</button>
+                <button data-type="play-game" id="play-button">CLICK TO PLAY</button>
             </div>
         </div>
     </section>
@@ -45,5 +45,7 @@
     <section id="outcome-history-section">Outcome History Section
 
     </section>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
