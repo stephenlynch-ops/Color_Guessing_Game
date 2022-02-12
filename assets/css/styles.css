@@ -130,3 +130,34 @@ body {
     font-size: xx-large;
     border-radius: 8px;
 }
+
+/* Score Section Styles */
+
+#score-summary {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scores-title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.scores {
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#correct {
+    color: #006400;
+    float: left;
+}
+
+#incorrect {
+    color: #910000;
+    float: right;
+}
+
