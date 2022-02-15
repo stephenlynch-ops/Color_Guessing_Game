@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let playersChoice = this.getAttribute("data-type");
 
                 document.getElementById("choosen-color").innerText = playersChoice;
-                
+
                 runGame(playersChoice);
             }
         })
@@ -33,13 +33,17 @@ function runGame(playersChoice) {
         var randomColor = "pink";
     }
 
+    document.getElementById("pc-color").innerText = randomColor;
+
     console.log(randomColor)
 
     if (randomColor === playersChoice) {
-        alert (`You won, both you and computer picked ${playersChoice}`);
+        // alert (`You won, both you and computer picked ${playersChoice}`);
+        document.getElementById("result").innerText = "You won!!!";
         incrementCorrectScore();
     } else {
-        alert (`You lost, you choice ${playersChoice} does not match the computers choice, which was ${randomColor}`);
+        // alert (`You lost, you choice ${playersChoice} does not match the computers choice, which was ${randomColor}`);
+        document.getElementById("result").innerText = "You Lost :(";
         incrementIncorrectScore();
     }
 }
