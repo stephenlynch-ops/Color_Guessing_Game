@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("You clicked Play Game!");
             } else {
                 let playersChoice = this.getAttribute("data-type");
+
+                document.getElementById("choosen-color").innerText = playersChoice;
+                
                 runGame(playersChoice);
             }
         })
@@ -34,13 +37,11 @@ function runGame(playersChoice) {
 
     if (randomColor === playersChoice) {
         alert (`You won, both you and computer picked ${playersChoice}`);
+        incrementCorrectScore();
     } else {
         alert (`You lost, you choice ${playersChoice} does not match the computers choice, which was ${randomColor}`);
+        incrementIncorrectScore();
     }
-}
-
-function convertNumberToColor() {
-
 }
 
 function checkAnswer() {
@@ -49,9 +50,15 @@ function checkAnswer() {
 
 function incrementCorrectScore() {
 
+    let currentScore = parseInt(document.getElementById("correct-answers").innerText);
+    document.getElementById("correct-answers").innerText = ++currentScore;
+
 }
 
 function incrementIncorrectScore() {
+
+    let currentScore = parseInt(document.getElementById("incorrect-answers").innerText);
+    document.getElementById("incorrect-answers").innerText = ++currentScore;
 
 }
 
