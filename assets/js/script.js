@@ -1,3 +1,7 @@
+/**
+ * Loads once the DOM has loaded. Collects data from the color
+ * button that the user clicks and then starts the runGame function.
+ */
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -16,7 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-
+/**
+ * Generates a random number between 1 and 4, then converts it to a colour
+ * based on the if / else if statements below.
+ * It then compares the choosen player colour, which comes from the data-type
+ * of the button the user clicks.
+ * Depending on this comparison it then returns a result.
+ */
 function runGame(playersChoice) {
 
     var ranNum = Math.floor(Math.random() * 4) + 1;
@@ -38,20 +48,18 @@ function runGame(playersChoice) {
     console.log(randomColor)
 
     if (randomColor === playersChoice) {
-        // alert (`You won, both you and computer picked ${playersChoice}`);
         document.getElementById("result").innerText = "You won!!!";
         incrementCorrectScore();
     } else {
-        // alert (`You lost, you choice ${playersChoice} does not match the computers choice, which was ${randomColor}`);
         document.getElementById("result").innerText = "You Lost :(";
         incrementIncorrectScore();
     }
 }
 
-function checkAnswer() {
-
-}
-
+/**
+ * Updates the correct score in the scores section based on the last
+ * round of guessing - if the user guesses the correct color.
+ */
 function incrementCorrectScore() {
 
     let currentScore = parseInt(document.getElementById("correct-answers").innerText);
@@ -59,6 +67,10 @@ function incrementCorrectScore() {
 
 }
 
+/**
+ * Updates the incorrect score in the scores section based on the last
+ * round of guessing - if the user guesses the wrong color.
+ */
 function incrementIncorrectScore() {
 
     let currentScore = parseInt(document.getElementById("incorrect-answers").innerText);
@@ -66,6 +78,10 @@ function incrementIncorrectScore() {
 
 }
 
+/**
+ * This takes the computers past colour selections and plots them in a graph
+ * for the user to use in order to have a better chance of winning (maybe).
+ */
 function updateColorHistory() {
 
 }
