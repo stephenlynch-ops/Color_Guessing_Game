@@ -121,6 +121,11 @@ body {
 
 /* Score Section Styles */
 
+#player-score-section {
+    height: 15vh;
+    max-height: 75px;
+}
+
 #score-summary {
     width: 80%;
     margin-left: auto;
@@ -142,10 +147,43 @@ body {
 #correct {
     color: #006400;
     float: left;
+    margin: 0px;
 }
 
 #incorrect {
     color: #910000;
     float: right;
+    margin: 0px;
+}
+
+/* Color Pattern Section */
+
+.color-pattern-titles {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0px;
+}
+
+#computers-pattern, #players-pattern {
+    width: 80%;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid red;
+    padding: 0px;
+    margin-bottom: 30px;
+    
+}
+
+.color-pattern-boxes {
+    width: 25%;
+    height: 15vh;
+    box-sizing: border-box;
+    border: 2px solid black;
+    float: left;
+    line-height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
