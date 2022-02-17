@@ -29,31 +29,40 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame(playersChoice) {
 
-    var ranNum = Math.floor(Math.random() * 4) + 1;
+    let pcColorPattern = new Array(4);
+    let ranNum = Math.floor(Math.random() * 4) + 1;
     
-    console.log(ranNum);
+    let i = 0;
+    while (i < 5) { 
 
-    if (ranNum === 1) {
-        var randomColor = "red";
-    } else if (ranNum === 2) {
-        var randomColor = "blue";
-    } else if (ranNum === 3) {
-        var randomColor = "green";
-    } else { 
-        var randomColor = "pink";
+        if (ranNum === 1) {
+            let randomColor = "red";
+        } else if (ranNum === 2) {
+            let randomColor = "blue";
+        } else if (ranNum === 3) {
+            let randomColor = "green";
+        } else { 
+            let randomColor = "pink";
+        }
+
+        pcColorPattern[i] = randomColor;
+
+        i++
     }
 
-    document.getElementById("pc-color").innerText = randomColor;
+    console.log(pcColorPattern);
 
-    console.log(randomColor)
+    // document.getElementById("pc-color").innerText = randomColor;
 
-    if (randomColor === playersChoice) {
-        document.getElementById("result").innerText = "You won!!!";
-        incrementCorrectScore();
-    } else {
-        document.getElementById("result").innerText = "You Lost :(";
-        incrementIncorrectScore();
-    }
+    // console.log(pcColorPattern);
+
+    // if (randomColor === playersChoice) {
+    //     document.getElementById("result").innerText = "You won!!!";
+    //     incrementCorrectScore();
+    // } else {
+    //     document.getElementById("result").innerText = "You Lost :(";
+    //     incrementIncorrectScore();
+    // }
 }
 
 /**
@@ -78,10 +87,3 @@ function incrementIncorrectScore() {
 
 }
 
-/**
- * This takes the computers past colour selections and plots them in a graph
- * for the user to use in order to have a better chance of winning (maybe).
- */
-function updateColorHistory() {
-
-}
